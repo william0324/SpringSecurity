@@ -4,9 +4,17 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/security_study?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123
+
   thymeleaf:
     cache: false # 开发时可以不使用缓存
     check-template: true # 检查模版
+
+  data:
+    redis:
+      host: 182.92.215.177
+      port: 6379
+      password: 2000324
+      database: 0
 
 mybatis:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -14,3 +22,5 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+my:
+  secretKey: romaneekang
