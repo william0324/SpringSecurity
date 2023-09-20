@@ -10,6 +10,10 @@ import java.util.List;
 
 //自定义用户信息
 public class SecurityUserDetails implements UserDetails {
+    public User getUser() {
+        return user;
+    }
+
     private final User user;
     private List<SimpleGrantedAuthority> authorityList;
 
